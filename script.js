@@ -14,7 +14,7 @@ console.log("let's write java script");
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 async function getsongs() {
-    let a = await fetch("http://127.0.0.1:5500/songs/");
+    let a = await fetch("./songs/");
     let response = await a.text()
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -107,5 +107,6 @@ document.querySelector(".left").style.left="-100%";
  })
 } 
 main()
+
 
 
